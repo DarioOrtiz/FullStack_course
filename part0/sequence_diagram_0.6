@@ -1,0 +1,6 @@
+sequenceDiagram
+    participant Browser as Navegador
+    participant Server as Servidor
+
+    Browser->>Server: Solicitud POST a https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    Server-->>Browser: Respuesta con código de estado HTTP 201 Created

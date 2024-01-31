@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant Browser as Navegador
+    participant Server as Servidor
+    participant NotesPage as Página de Notas
+    participant CSS as Hoja de Estilo (main.css)
+    participant JS as Código JavaScript (main.js)
+    participant Data as Datos (data.json)
+
+    Browser->>Server: Solicitud HTTP POST a new_note
+    Server-->>Browser: Respuesta con código de estado HTTP 302
+    Browser->>Server: Solicitud HTTP GET a la dirección definida en Location (notes)
+    Server-->>Browser: Respuesta con la página de Notas
+    Browser->>Server: Solicitud HTTP GET a main.css
+    Server-->>Browser: Respuesta con main.css
+    Browser->>Server: Solicitud HTTP GET a main.js
+    Server-->>Browser: Respuesta con main.js
+    Browser->>Server: Solicitud HTTP GET a data.json
+    Server-->>Browser: Respuesta con data.json
+

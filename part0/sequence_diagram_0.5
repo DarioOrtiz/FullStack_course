@@ -1,0 +1,9 @@
+sequenceDiagram
+ participant Browser as Navegador
+    participant Server as Servidor
+    participant spa as Página Spa
+    participant CSS as Hoja de Estilo (main.css)
+    participant Data as Datos (data.json)
+
+    Browser->>Server: Solicitud GET a https://studies.cs.helsinki.fi/exampleapp/spa
+    Server-->>Browser: Respuesta con código de estado HTTP 200 OK
