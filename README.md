@@ -1,1 +1,1 @@
-# FullStack_curse
+# FullStack_course
